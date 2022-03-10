@@ -21,6 +21,9 @@
 		E65D07AE264C70EA008B4190 /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E65D07AD264C70EA008B4190 /* ComplicationController.swift */; };
 		E65D07B0264C70EB008B4190 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65D07AF264C70EB008B4190 /* Assets.xcassets */; };
 		E65D07B3264C70EB008B4190 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E65D07B2264C70EB008B4190 /* Preview Assets.xcassets */; };
+		E66747B026557C1900076D04 /* ComplicationsViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66747AF26557C1900076D04 /* ComplicationsViews.swift */; };
+		E66A271F26551329007DB603 /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A271E26551329007DB603 /* SolarSystem.swift */; };
+		E66A272026551329007DB603 /* SolarSystem.swift in Sources */ = {isa = PBXBuildFile; fileRef = E66A271E26551329007DB603 /* SolarSystem.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -85,6 +88,8 @@
 		E65D07B2264C70EB008B4190 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		E65D07B4264C70EB008B4190 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E65D07B5264C70EB008B4190 /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		E66747AF26557C1900076D04 /* ComplicationsViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComplicationsViews.swift; sourceTree = "<group>"; };
+		E66A271E26551329007DB603 /* SolarSystem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = SolarSystem.swift; path = "watchOS-Complication/SolarSystem.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -129,6 +134,7 @@
 			isa = PBXGroup;
 			children = (
 				E65D0788264C70E7008B4190 /* watchOS_ComplicationApp.swift */,
+				E66A271D2655126C007DB603 /* Model */,
 				E65D078A264C70E7008B4190 /* ContentView.swift */,
 				E65D078C264C70E8008B4190 /* Assets.xcassets */,
 				E65D0791264C70E8008B4190 /* Info.plist */,
@@ -158,6 +164,7 @@
 			isa = PBXGroup;
 			children = (
 				E65D07A5264C70EA008B4190 /* watchOS_ComplicationApp.swift */,
+				E66747AF26557C1900076D04 /* ComplicationsViews.swift */,
 				E65D07A7264C70EA008B4190 /* ContentView.swift */,
 				E65D07A9264C70EA008B4190 /* NotificationController.swift */,
 				E65D07AB264C70EA008B4190 /* NotificationView.swift */,
@@ -176,6 +183,15 @@
 				E65D07B2264C70EB008B4190 /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		E66A271D2655126C007DB603 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				E66A271E26551329007DB603 /* SolarSystem.swift */,
+			);
+			name = Model;
+			path = "New Group";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -310,6 +326,7 @@
 			files = (
 				E65D078B264C70E7008B4190 /* ContentView.swift in Sources */,
 				E65D0789264C70E7008B4190 /* watchOS_ComplicationApp.swift in Sources */,
+				E66A271F26551329007DB603 /* SolarSystem.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -319,7 +336,9 @@
 			files = (
 				E65D07AA264C70EA008B4190 /* NotificationController.swift in Sources */,
 				E65D07A8264C70EA008B4190 /* ContentView.swift in Sources */,
+				E66747B026557C1900076D04 /* ComplicationsViews.swift in Sources */,
 				E65D07AE264C70EA008B4190 /* ComplicationController.swift in Sources */,
+				E66A272026551329007DB603 /* SolarSystem.swift in Sources */,
 				E65D07A6264C70EA008B4190 /* watchOS_ComplicationApp.swift in Sources */,
 				E65D07AC264C70EA008B4190 /* NotificationView.swift in Sources */,
 			);

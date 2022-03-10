@@ -32,6 +32,8 @@
 		<key>NSExtensionPointIdentifier</key>
 		<string>com.apple.watchkit</string>
 	</dict>
+	<key>NSLocalNetworkUsageDescription</key>
+	<string></string>
 	<key>WKRunsIndependentlyOfCompanionApp</key>
 	<true/>
 </dict>

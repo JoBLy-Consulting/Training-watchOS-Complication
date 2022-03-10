@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+@available(watchOSApplicationExtension 8.0, *)
 @main
 struct watchOS_ComplicationApp: App {
     @SceneBuilder var body: some Scene {
@@ -16,6 +17,6 @@ struct watchOS_ComplicationApp: App {
             }
         }
 
-        WKNotificationScene(controller: NotificationController.self, category: "myCategory")
+        WKNotificationScene(controller: NotificationController.self, category: "new")
     }
 }

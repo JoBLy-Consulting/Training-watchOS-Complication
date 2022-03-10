@@ -6,8 +6,10 @@
 //
 
 import ClockKit
+import SwiftUI
 
 
+@available(watchOSApplicationExtension 8.0, *)
 class ComplicationController: NSObject, CLKComplicationDataSource {
     
     // MARK: - Complication Configuration
@@ -42,7 +44,12 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     
     func getCurrentTimelineEntry(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTimelineEntry?) -> Void) {
         // Call the handler with the current timeline entry
-        handler(nil)
+        if let template=makeTemplate(complication: complication) {
+            let entry = CLKComplicationTimelineEntry(date:Date(), complicationTemplate: template)
+            handler(entry)
+        }else{
+            handler(nil)
+        }
     }
     
     func getTimelineEntries(for complication: CLKComplication, after date: Date, limit: Int, withHandler handler: @escaping ([CLKComplicationTimelineEntry]?) -> Void) {
@@ -55,5 +62,16 @@ class ComplicationController: NSObject, CLKComplicationDataSource {
     func getLocalizableSampleTemplate(for complication: CLKComplication, withHandler handler: @escaping (CLKComplicationTemplate?) -> Void) {
         // This method will be called once per supported complication, and the results will be cached
         handler(nil)
+    }
+}
+
+@available(watchOSApplicationExtension 8.0, *)
+extension ComplicationController {
+    func makeTemplate (complication: CLKComplication
+    ) -> CLKComplicationTemplate? {
+        switch(complication.family) {
+        case .graphicRectangular: return CLKComplicationTemplateGraphicRectangularFullView(ComplicationGaugeSolarSystem())
+        default: return nil
+        }
     }
 }
